@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: anahis10
+      MYSQL_DATABASE: anahism
+      MYSQL_USER: anahis
+      MYSQL_PASSWORD: anahis10
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
